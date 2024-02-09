@@ -1,11 +1,11 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { MdOutlineClose } from "react-icons/md";
-import Logo from "./logo";
-import { Bars3Icon } from "@heroicons/react/16/solid";
-import { Dialog, Popover } from "@headlessui/react";
+import { useState } from 'react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { MdOutlineClose } from 'react-icons/md'
+import Logo from './logo'
+import { Bars3Icon } from '@heroicons/react/16/solid'
+import { Dialog, Popover } from '@headlessui/react'
 
 const NavLinks = () => {
   return (
@@ -28,15 +28,15 @@ const NavLinks = () => {
     //     Entre em Contato
     //   </button>
     // </div>
-  );
-};
+  )
+}
 
 const Nav = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <nav
-      className="mx-auto font-outfit text-navbar_font flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      className="font-outfit mx-auto text-navbar_font flex max-w-7xl items-center justify-between p-6 lg:px-8"
       aria-label="Global"
     >
       <Logo />
@@ -55,7 +55,7 @@ const Nav = () => {
         <NavLinks />
       </Popover.Group>
     </nav>
-  );
+  )
 
   //   const [isOpen, setIsOpen] = useState(false);
 
@@ -82,6 +82,6 @@ const Nav = () => {
   //       )}
   //     </>
   //   );
-};
+}
 
-export default Nav;
+export default Nav

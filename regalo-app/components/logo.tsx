@@ -1,5 +1,5 @@
-import Image from "next/image";
-import logo from "../public/images/logo-horizontal.png";
+import Image from 'next/image';
+import logo from '../public/images/logo-horizontal.png';
 
 const Logo = () => {
   return (
