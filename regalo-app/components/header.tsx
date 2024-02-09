@@ -1,26 +1,9 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Logo from "./logo";
-import Nav from "./navbar";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
-import { Dialog, Popover } from "@headlessui/react";
-
-const NavLinks = () => {
-  return (
-    <>
-      <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-        Nossos Serviços
-      </a>
-      <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-        Quem somos
-      </a>
-      <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-        Entre em Contato
-      </a>
-    </>
-  );
-};
+import { useState } from 'react';
+import Logo from './logo';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
+import { Dialog, Popover } from '@headlessui/react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,7 +29,15 @@ export default function Header() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <NavLinks />
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            Nossos Serviços
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            Quem somos
+          </a>
+          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            Entre em Contato
+          </a>
         </Popover.Group>
       </nav>
 
