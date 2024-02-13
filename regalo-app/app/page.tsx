@@ -1,7 +1,13 @@
-import Header from "@/components/header"
+import Header from '@/components/header';
+import { Presentation } from './body';
 
 export default function Home() {
   return (
-    <Header/>
-  )
+    <>
+      <Header />
+      <div>
+        <Presentation />
+      </div>
+    </>
+  );
 }
