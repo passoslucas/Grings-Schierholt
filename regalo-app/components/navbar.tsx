@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Logo from './logo';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
 import { Dialog, Popover } from '@headlessui/react';
+import Link from 'next/link';
 
 const Links = (
   name: string,
@@ -21,19 +22,19 @@ const Links = (
 
 const link1 = Links(
   'Nossos Serviços',
-  '#',
+  'dashboard#myservices',
   'text-sm font-semibold leading-6 text-gray-900',
   '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
 );
 const link2 = Links(
   'Quem Somos',
-  '#',
+  'dashboard#about',
   'text-sm font-semibold leading-6 text-gray-900',
   '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
 );
 const link3 = Links(
   'Entre em Contato',
-  '#',
+  'dashboard#contact',
   'text-sm font-semibold leading-6 text-gray-900',
   '-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50'
 );
