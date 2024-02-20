@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regalo Assessoria</title>
+    <link rel="stylesheet" href="static/css/index.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="sidebar">
+        <li class="close-button">
+          <a href="/" class="nav__link" data-link>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="50"
+              viewBox="0 -960 960 960"
+              width="32"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="/services" class="nav__link" data-link>Nossos Serviços</a>
+        </li>
+        <li><a href="/about" class="nav__link" data-link>Sobre a Regalo</a></li>
+        <li>
+          <a href="/contact_us" class="nav__link" data-link>Entre em Contato</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="/" class="nav__link" data-link>
+            <img
+              src="./static/images/logo-resized-2.png"
+              alt="regalo-logo"
+              height="32"
+            />
+          </a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="/services" class="nav__link" data-link>Nossos Serviços</a>
+        </li>
+        <li class="hideOnMobile">
+          <a href="/about" class="nav__link" data-link>Sobre a Regalo</a>
+        </li>
+        <li class="hideOnMobile">
+          <a id="contact-us" href="/contact_us" class="nav__link" data-link
+            >Entre em Contato</a
+          >
+        </li>
+        <li class="menu-button">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="50"
+              viewBox="0 -960 960 960"
+              width="32"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              /></svg
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div id="app"></div>
+    <script type="module" src="/static/js/index.js"></script>
+  </body>
+</html>
