@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --clr-background-dark: #1c1e23;
+  --clr-neutral-1: #fcfcfc;
+  --clr-neutral-2: #e4b44c;
+  --clr-neutral-3: #edce8b;
+  --clr-neutral-4: #55451b;
+  --clr-neutral-5: #7c7c7c;
+  --clr-neutral-6: #b4b4b4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,17 +18,21 @@
 body {
   margin: auto;
   min-height: 100vh;
-  font-family: "Quicksand", sans-serif;
-  color: #fcfcfc;
-  background: #1c1e23;
+  font-family: "Outfit", sans-serif;
+  color: var(--clr-neutral-1);
+  background: var(--clr-background-dark);
 }
 
+/* navbar */
+
 .nav {
+  margin: 96px;
   position: sticky;
+  z-index: 990;
   top: 0;
   padding-left: 96px;
   padding-right: 96px;
-  background: #1c1e23;
+  background: var(--clr-background-dark);
   /* border-bottom: 1px solid #7c7c7c; */
 }
 
@@ -36,7 +52,7 @@ nav a {
   display: flex;
   padding: 0 30px;
   text-decoration: none;
-  color: #fcfcfc;
+  color: var(--clr-neutral-1);
   font-weight: 200;
   align-items: center;
   white-space: nowrap;
@@ -46,7 +62,8 @@ nav li:first-child {
   margin-right: auto;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link:focus-within {
   background: rgba(255, 255, 255, 0.05);
   font-weight: 500;
 }
@@ -58,7 +75,7 @@ nav li:first-child {
   height: 100vh;
   width: 250px;
   z-index: 999;
-  background: #1c1e23;
+  background: var(--clr-background-dark);
   /* backdrop-filter: blur(10px); */
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
@@ -80,21 +97,132 @@ nav li:first-child {
 }
 
 #contact-us {
-  background-color: #e4b44c;
+  background-color: var(--clr-neutral-2);
   font-weight: 400;
-  color: #1c1e23;
+  color: var(--clr-background-dark);
 }
 
-#contact-us:hover {
-  background-color: #55451b;
+#contact-us:hover,
+#contact-us:focus-within {
+  background-color: var(--clr-neutral-4);
   font-weight: 500;
-  color: #fcfcfc;
+  color: var(--clr-neutral-1);
 }
+
+/* App component */
 
 #app {
   margin: 96px;
-  line-height: 1.5;
+  font-family: "Outfit", sans-serif;
+  /* margin: 0; */
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  tect-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+/* Service view return */
+
+.container {
+  padding: 15px 9%;
+  padding-bottom: 84px;
+}
+
+.container .heading {
+  text-align: center;
+  padding-bottom: 84px;
+  font-size: 48px;
+  color: var(--clr-neutral-1);
+}
+
+.container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  column-gap: 24px;
+  row-gap: 52px;
+}
+
+.card {
+  border-radius: 8px;
+  background: var(--clr-neutral-1);
+  color: var(--clr-background-dark);
+  text-transform: none;
+  height: 400px;
+  overflow: hidden;
+  transition: transform 500ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
+}
+
+.card img {
+  margin: 0;
+  padding: 0;
+  width: 600px;
+  height: 330px;
+  object-fit: cover;
+  object-position: top 0 right 100px;
+}
+
+.card-content {
+  padding: 20px;
+  background: var(--clr-neutral-1);
+  transform: translateY(0%);
+  transition: transform 500ms ease;
+}
+
+.card:hover .card-content,
+.card:focus-within .card-content {
+  transform: translateY(-65%);
+}
+
+.card-content > *:not(.card-content h3) {
+  opacity: 0;
+  transition: 500ms linear;
+}
+
+.card:hover .card-content > *:not(.card-content h3),
+.card:focus-within .card-content > *:not(.card-content h3) {
+  opacity: 1;
+}
+
+.card:focus-within .card-content {
+  transition-duration: 0ms;
+}
+
+.card-content h3 {
+  padding-bottom: 24px;
   font-weight: 500;
+  position: relative;
+}
+
+.card-content p {
+  padding-bottom: 24px;
+  line-height: 1.5;
+  font-size: 14px;
+  text-transform: none;
+}
+
+.card-content .btn {
+  margin-bottom: 0;
+  display: inline-block;
+  background: var(--clr-neutral-2);
+  color: var(--clr-background-dark);
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+}
+
+.card-content .btn:hover,
+.card-content .btn:focus-within {
+  letter-spacing: 0.5px;
 }
 
 @media (max-width: 900px) {
@@ -110,5 +238,11 @@ nav li:first-child {
 @media (max-width: 400px) {
   .sidebar {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
   }
 }

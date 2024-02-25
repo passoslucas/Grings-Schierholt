@@ -1,7 +1,8 @@
 import Dashboard from "./views/Dashboard.js";
-import Posts from "./views/Posts.js";
-import PostView from "./views/PostView.js";
-import Settings from "./views/Settings.js";
+import Services from "./views/Services.js";
+import ServicesView from "./views/ServicesView.js";
+import Contact from "./views/Contact.js";
+import About from "./views/About.js";
 
 const menuButton = document.querySelector(".menu-button");
 const closeButton = document.querySelector(".close-button");
@@ -43,9 +44,10 @@ const navigateTo = (url) => {
 const router = async () => {
   const routes = [
     { path: "/", view: Dashboard },
-    { path: "/posts", view: Posts },
-    { path: "/posts/:id", view: PostView },
-    { path: "/settings", view: Settings },
+    { path: "/services", view: Services },
+    { path: "/services/:id", view: ServicesView },
+    { path: "/about", view: About },
+    { path: "/contact_us", view: Contact },
   ];
 
   //Test each route for potential match
