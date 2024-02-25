@@ -26,14 +26,13 @@ body {
 /* navbar */
 
 .nav {
-  margin: 96px;
+  margin: 0 96px;
   position: sticky;
   z-index: 990;
-  top: 0;
   padding-left: 96px;
   padding-right: 96px;
   background: var(--clr-background-dark);
-  /* border-bottom: 1px solid #7c7c7c; */
+  border-bottom: 1px solid #7c7c7c;
 }
 
 nav ul {
@@ -76,7 +75,6 @@ nav li:first-child {
   width: 250px;
   z-index: 999;
   background: var(--clr-background-dark);
-  /* backdrop-filter: blur(10px); */
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
@@ -112,7 +110,7 @@ nav li:first-child {
 /* App component */
 
 #app {
-  margin: 96px;
+  margin: 0 96px;
   font-family: "Outfit", sans-serif;
   /* margin: 0; */
   padding: 0;
@@ -128,12 +126,11 @@ nav li:first-child {
 
 .container {
   padding: 15px 9%;
-  padding-bottom: 84px;
 }
 
 .container .heading {
   text-align: center;
-  padding-bottom: 84px;
+  padding: 84px 0;
   font-size: 48px;
   color: var(--clr-neutral-1);
 }
@@ -153,6 +150,7 @@ nav li:first-child {
   height: 400px;
   overflow: hidden;
   transition: transform 500ms ease;
+  padding-bottom: 6px;
 }
 
 .card:hover,
@@ -225,24 +223,59 @@ nav li:first-child {
   letter-spacing: 0.5px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .hideOnMobile {
     display: none;
   }
-
   .menu-button {
-    display: block;
+    display: inline-block;
   }
-}
 
-@media (max-width: 400px) {
-  .sidebar {
-    width: 100%;
+  .nav {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 20px;
+  }
+}
+
+@media (max-width: 880px) {
+  .card img {
+    object-position: top 0 right 0px;
+  }
+
+  .container .heading {
+    padding: 48px 0;
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav {
+    margin: 0;
+  }
+
+  #app {
+    margin: 0 48px;
+  }
+
+  /* padding do card */
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .container .heading {
+    font-size: 24px;
   }
 }
