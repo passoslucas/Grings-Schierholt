@@ -9,7 +9,7 @@ const services = [
     text: "O benefício salário maternidade, é destinado a mães que estavam desempregadas na data do seu parto, e que possuem filhos até 5 anos de idade. Têm direito aquelas mulheres em que o nascimento ou adoção do filho ocorrer em um período que varia de 12 a 36 meses após a demissão ou a partir da data da última contribuição individual, pelo carnê, ou como MEI. O auxílio-maternidade é garantido em casos de parto (antecipado ou não), de aborto não-criminoso e de adoção. Mães de bebês natimortos também tem direito ao benefício. A Regalo pode te ajudar, entre em contato conosco.",
   },
   {
-    name: "Revisão da Vida Toda ",
+    name: "Revisão da Vida Toda",
     imageSrc: "/static/images/services/revisao-vida-toda.jpg",
     preview:
       "É uma oportunidade de recálculo do valor do benefício de aposentadoria pago pelo INSS no Brasil. Esse reajuste permite...",
@@ -23,7 +23,7 @@ const services = [
     text: "A aposentadoria é um benefício para aquelas pessoas que já cumpriram o tempo contribuição, que completou a idade urbana ou rural, ou que tenha alguma deficiência. Procure a Regalo para o seu planejamento previdenciário!",
   },
   {
-    name: "Revisão de Aposentadoria ou Benefício ",
+    name: "Revisão de Aposentadoria ou Benefício",
     imageSrc: "/static/images/services/revisao-aposentadoria.jpg",
     preview:
       "É uma forma de pedir uma nova análise do benefício que recebe. É indicado nos casos, por exemplo, de: ajustes do valor...",
@@ -107,7 +107,7 @@ export default class extends AbstractView {
 
   async getHtml() {
     return `
-        <div class="container">
+        <div class="app-container">
           <h1 class="heading">Nossos Serviços</h1>
           <div class="box-container">
               ${getContainerItemsHtml(services)}
