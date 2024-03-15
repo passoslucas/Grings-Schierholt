@@ -17,7 +17,7 @@ const selectorOptions = [
 export default class extends AbstractView {
   constructor(params) {
     super(params);
-    this.setTitle("Fale Conosco");
+    this.setTitle("Fale Conosco | Regalo Assessoria");
   }
 
   async getHtml() {
@@ -30,7 +30,7 @@ export default class extends AbstractView {
                 <h2>Entre em contato</h2>
                 <p>Nos deixe uma mensagem. Vamos entrar em contato e esclarecer todas as suas dúvidas o mais rápido possível!</p>
                 <h3>Onde nos encontrar?</h3>
-                </div>
+              </div>
               <div class="box">
                 <div class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" height="24" fill="white" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
@@ -121,6 +121,6 @@ export default class extends AbstractView {
             </div>
           </div>
         </div>
-        `;
+    `;
   }
 }

@@ -15,12 +15,17 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: auto;
   min-height: 100vh;
   font-family: "Outfit", sans-serif;
   color: var(--clr-neutral-1);
   background: var(--clr-background-dark);
+  overflow-x: hidden;
 }
 
 /* navbar */
@@ -121,20 +126,36 @@ nav li:first-child {
   transition: 0.2s linear;
 }
 
-/* Service view return */
-
-.app-container {
-  padding: 15px 9%;
-}
-
-.app-container .heading {
+.container-heading {
   text-align: center;
   padding: 84px 0;
   font-size: 48px;
   color: var(--clr-neutral-1);
 }
 
-.app-container .box-container {
+/* Home page */
+
+.homepage-container {
+  margin: 84px;
+  padding: 84px;
+  text-align: center;
+  font-size: 38px;
+  text-transform: none;
+}
+
+.svg-homepage {
+  margin-top: 200px;
+}
+
+/* Service view return */
+
+.services-container {
+  padding: 15px 9%;
+  filter: none;
+  /* filter: blur(20px); */
+}
+
+.services-container .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   column-gap: 24px;
@@ -220,6 +241,22 @@ nav li:first-child {
 .card-content .btn:hover,
 .card-content .btn:focus-within {
   letter-spacing: 0.5px;
+}
+
+/* Modal */
+
+.modal {
+  padding: 1em;
+  max-width: 50ch;
+  box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
+
+  & > * {
+    margin: 0 0 0.5rem 0;
+  }
+}
+
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
 }
 
 /* Contact-us Component */
