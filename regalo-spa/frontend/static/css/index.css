@@ -1,13 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-  --clr-background-dark: #1c1e23;
-  --clr-neutral-1: #fcfcfc;
-  --clr-neutral-2: #e4b44c;
-  --clr-neutral-3: #edce8b;
-  --clr-neutral-4: #55451b;
-  --clr-neutral-5: #7c7c7c;
-  --clr-neutral-6: #b4b4b4;
+  --dark: #1c1e23;
+  --light: #fcfcfc;
+  --yellow: #e4b44c;
+  --light-yellow: #edce8b;
+  --dark-yellow: #55451b;
+  --grey: #7c7c7c;
+  --light-grey: #b4b4b4;
 }
 
 * {
@@ -23,8 +23,8 @@ body {
   margin: auto;
   min-height: 100vh;
   font-family: "Outfit", sans-serif;
-  color: var(--clr-neutral-1);
-  background: var(--clr-background-dark);
+  color: var(--light);
+  background: var(--dark);
   overflow-x: hidden;
 }
 
@@ -33,10 +33,11 @@ body {
 .nav {
   margin: 0 96px;
   position: sticky;
-  z-index: 990;
+  top: 0;
+  z-index: 980;
   padding-left: 96px;
   padding-right: 96px;
-  background: var(--clr-background-dark);
+  background: var(--dark);
   border-bottom: 1px solid #7c7c7c;
 }
 
@@ -56,7 +57,7 @@ nav a {
   display: flex;
   padding: 0 30px;
   text-decoration: none;
-  color: var(--clr-neutral-1);
+  color: var(--light);
   font-weight: 200;
   align-items: center;
   white-space: nowrap;
@@ -78,8 +79,8 @@ nav li:first-child {
   right: 0;
   height: 100vh;
   width: 250px;
-  z-index: 999;
-  background: var(--clr-background-dark);
+  z-index: 990;
+  background: var(--dark);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
@@ -100,15 +101,15 @@ nav li:first-child {
 }
 
 #contact-us {
-  background-color: var(--clr-neutral-2);
+  background-color: var(--yellow);
   font-weight: 400;
-  color: var(--clr-background-dark);
+  color: var(--dark);
 }
 
 #contact-us:hover,
 #contact-us:focus-within {
   font-weight: 500;
-  color: var(--clr-neutral-1);
+  color: var(--light);
 }
 
 /* App component */
@@ -130,7 +131,7 @@ nav li:first-child {
   text-align: center;
   padding: 84px 0;
   font-size: 48px;
-  color: var(--clr-neutral-1);
+  color: var(--light);
 }
 
 /* Home page */
@@ -164,8 +165,8 @@ nav li:first-child {
 
 .card {
   border-radius: 8px;
-  background: var(--clr-neutral-1);
-  color: var(--clr-background-dark);
+  background: var(--light);
+  color: var(--dark);
   text-transform: none;
   height: 400px;
   overflow: hidden;
@@ -190,7 +191,7 @@ nav li:first-child {
 
 .card-content {
   padding: 20px;
-  background: var(--clr-neutral-1);
+  background: var(--light);
   transform: translateY(0%);
   transition: transform 500ms ease;
 }
@@ -230,8 +231,8 @@ nav li:first-child {
 .card-content .btn {
   margin-bottom: 0;
   display: inline-block;
-  background: var(--clr-neutral-2);
-  color: var(--clr-background-dark);
+  background: var(--yellow);
+  color: var(--dark);
   font-size: 12px;
   border-radius: 6px;
   padding: 0.5em 1.5em;
@@ -283,8 +284,7 @@ nav li:first-child {
 .contact-page-container .contact-info .message h2 {
   font-size: 32px;
   padding-top: 36px;
-  /* padding-left: 20px; */
-  color: var(--clr-neutral-2);
+  color: var(--yellow);
 }
 
 .contact-page-container .contact-info .message p {
@@ -324,7 +324,7 @@ nav li:first-child {
 }
 
 .contact-page-container .contact-info .box .text h3 {
-  color: var(--clr-neutral-2);
+  color: var(--yellow);
   font-size: 16px;
   font-weight: 500;
 }
@@ -338,7 +338,7 @@ nav li:first-child {
 
 .contact-form h2 {
   font-size: 32px;
-  color: var(--clr-background-dark);
+  color: var(--dark);
   padding-bottom: 10px;
   margin-top: 36px;
 }
@@ -387,14 +387,14 @@ nav li:first-child {
   margin: 12px 0;
   pointer-events: none;
   transition: 0.5s;
-  color: var(--clr-neutral-5);
+  color: var(--grey);
   z-index: 800;
 }
 
 .contact-form .input-box select {
   font-size: 16px;
   margin: 12px 0;
-  color: var(--clr-background-dark);
+  color: var(--dark);
   z-index: 800;
 }
 
@@ -402,15 +402,15 @@ nav li:first-child {
 .contact-form .input-box input:valid ~ span,
 .contact-form .input-box textarea:focus ~ span,
 .contact-form .input-box textarea:valid ~ span {
-  color: var(--clr-neutral-2);
+  color: var(--yellow);
   font-size: 14px;
   transform: translateY(-25px);
 }
 
 .contact-form .input-box input[type="submit"] {
   width: 100px;
-  background: var(--clr-neutral-2);
-  color: var(--clr-neutral-1);
+  background: var(--yellow);
+  color: var(--light);
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -419,7 +419,7 @@ nav li:first-child {
 
 .contact-form .input-box input[type="submit"]:hover,
 .contact-form .input-box input[type="submit"]:focus {
-  color: var(--clr-background-dark);
+  color: var(--dark);
 }
 
 /* Views */
