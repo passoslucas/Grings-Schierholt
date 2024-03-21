@@ -26,12 +26,13 @@ body {
   color: var(--light);
   background: var(--dark);
   overflow-x: hidden;
+  filter: none;
 }
 
 /* navbar */
 
 .nav {
-  /* margin: 0 96px; */
+  /* min-width: 100%; */
   position: sticky;
   top: 0;
   z-index: 980;
@@ -121,6 +122,13 @@ nav li:first-child {
   color: var(--light);
 }
 
+/* App Component */
+
+#wrapper {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
 /* Pages Heading >> H1 */
 .container-heading {
   text-align: center;
@@ -146,7 +154,7 @@ nav li:first-child {
 /* Service Page */
 
 .services-container {
-  padding: 15% 10%;
+  padding: 15%;
 }
 
 .services-container .box-container {
@@ -154,8 +162,6 @@ nav li:first-child {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   column-gap: 36px;
   row-gap: 52px;
-  max-width: 1200px;
-  justify-content: center;
 }
 
 /* Service Page >> Card */
@@ -519,28 +525,21 @@ nav li:first-child {
   }
 }
 
-@media (max-width: 768px) {
-  .app-container {
-    padding: 20px;
-  }
-}
-
 @media (max-width: 880px) {
-  .card img {
-    object-position: top 0 right 0px;
+  .homepage-container {
+    font-size: 32px;
   }
-
-  .app-container .heading {
-    padding: 48px 0;
-    font-size: 36px;
-  }
-
   .contact-page-container {
     flex-direction: column;
   }
 }
 
 @media (max-width: 660px) {
+  .homepage-container,
+  .container-heading {
+    font-size: 24px;
+  }
+
   .contact-page-container {
     flex-direction: column;
   }
@@ -594,28 +593,16 @@ nav li:first-child {
   }
 }
 
-@media (max-width: 500px) {
-  .nav {
-    margin: 0;
+@media (max-width: 545px) {
+  .homepage-container,
+  .container-heading {
+    font-size: 18px;
   }
-
-  #app {
-    margin: 0 48px;
-  }
-
-  /* padding do card */
 }
 
 @media (max-width: 400px) {
   .sidebar {
     width: 100%;
-  }
-
-  .app-container {
-    padding: 0;
-  }
-
-  .app-container .heading {
-    font-size: 24px;
+    height: 30%;
   }
 }

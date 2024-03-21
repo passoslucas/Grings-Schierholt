@@ -1,3 +1,7 @@
+const $display = document.querySelector(".sidebar");
+const $wrapper = document.querySelector("#wrapper");
+const $sidebar = document.querySelector(".sidebar");
+
 const services = [
   {
     name: "Salário Maternidade",
@@ -86,12 +90,14 @@ const menuButton = document.querySelector(".menu-button");
 const closeButton = document.querySelector(".close-button");
 
 const showSidebar = () => {
-  document.querySelector(".sidebar").style.display = "flex";
+  $display.style.display = "flex";
+  $wrapper.style.filter = "blur(5px)";
   console.log("Menu aberto");
 };
 
 const hideSidebar = () => {
-  document.querySelector(".sidebar").style.display = "none";
+  $sidebar.style.display = "none";
+  $wrapper.style.filter = "none";
   console.log("Menu fechado");
 };
 
@@ -139,5 +145,9 @@ function sendCardsInfo() {
     i++;
   } while (i <= services.length);
 }
+
+function getOptionsToContactField() {}
+
+function onClickLink() {}
 
 sendCardsInfo();
