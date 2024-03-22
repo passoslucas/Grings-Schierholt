@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
+  --ff-body: "Outfit", sans-serif;
+
   --dark: #1c1e23;
   --light: #fcfcfc;
   --yellow: #e4b44c;
@@ -8,7 +10,16 @@
   --dark-yellow: #55451b;
   --grey: #7c7c7c;
   --light-grey: #b4b4b4;
+  --contact-fill: #d9d9d9;
   --whatsapp: #25d366;
+
+  --fs-xl: 3rem;
+  --fs-l: 2.5rem;
+  --fs-700: 2rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+  --fs-300: 0.85rem;
 }
 
 * {
@@ -22,7 +33,7 @@ html {
 
 body {
   margin: auto;
-  font-family: "Outfit", sans-serif;
+  font-family: var(--ff-body);
   color: var(--light);
   background: var(--dark);
   overflow-x: hidden;
@@ -32,9 +43,8 @@ body {
 /* navbar */
 
 .nav {
-  /* min-width: 100%; */
   position: sticky;
-  top: 0;
+  top: -1px;
   z-index: 980;
   padding-left: 96px;
   padding-right: 96px;
@@ -47,7 +57,8 @@ nav ul {
   width: 100%;
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  grid-column-start: auto;
+  justify-content: space-between;
 }
 
 /* navbar >> item */
@@ -57,6 +68,7 @@ nav li {
 
 /* navbar >> text */
 nav a {
+  font-size: var(--fs-400);
   height: 100%;
   display: flex;
   padding: 0 30px;
@@ -125,6 +137,7 @@ nav li:first-child {
 /* App Component */
 
 #wrapper {
+  padding: 15% 10%;
   max-width: 1400px;
   margin-inline: auto;
 }
@@ -133,29 +146,26 @@ nav li:first-child {
 .container-heading {
   text-align: center;
   padding: 84px 0;
-  font-size: 48px;
+  font-size: var(--fs-xl);
   color: var(--light);
 }
 
 /* Home page */
 .homepage-container {
-  padding: 15% 10%;
+  display: grid;
+  align-content: space-around;
   text-align: center;
-  font-size: 240%;
+  font-size: var(--fs-l);
   text-transform: none;
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 /* Home page >> Button/SVG */
 .homepage-container .svg-homepage {
-  padding-top: 20%;
+  padding-bottom: 30%;
 }
 
 /* Service Page */
-
-.services-container {
-  padding: 15%;
-}
 
 .services-container .box-container {
   display: grid;
@@ -351,83 +361,79 @@ nav li:first-child {
 
 .contact-page-container {
   position: relative;
-  min-height: 100vh;
-  width: 100%;
   display: flex;
   justify-content: center;
-  alight-items: center;
+  align-items: center;
   text-transform: none;
+  border: 2px solid var(--contact-fill);
+  max-width: 72rem;
+  max-height: 34rem;
 }
 
-.contact-page-container .contact-info {
+.contact-info {
   display: flex;
   padding: 40px;
   flex-direction: column;
-  min-width: 350px;
-  height: 556px;
-  border: 1px solid #d9d9d9;
+  min-width: 18rem;
 }
 
-.contact-page-container .contact-info .message h2 {
-  font-size: 32px;
-  padding-top: 36px;
+.contact-info .message h2 {
+  padding-bottom: 14px;
+  font-size: var(--fs-700);
   color: var(--yellow);
 }
 
-.contact-page-container .contact-info .message p {
-  font-size: 14px;
-  padding-top: 12px;
-  padding-bottom: 24px;
-  max-width: 350px;
+.contact-info .message p {
+  font-size: var(--fs-300);
+  max-width: 27rem;
+  min-width: 16rem;
 }
 
-.contact-page-container .contact-info .message h3 {
-  font-size: 18px;
-  padding: 18px 0;
+.contact-info .message h3 {
+  padding-block: 30px 6px;
+  font-size: var(--fs-400);
   text-transform: uppercase;
 }
 
-.contact-page-container .contact-info .box {
+.contact-info .box {
   position: relative;
-  padding: 6px 0;
+  padding-block: 8px;
   display: flex;
 }
 
-.contact-page-container .contact-info .box .icon {
-  min-width: 60px;
-  height: 60px;
-  margin-left: -15px;
+.contact-info .box .icon {
+  min-width: 48px;
+  height: 48px;
+  margin-left: -12px;
   display: flex;
   justify-content: center;
-  aling-items: center;
 }
 
-.contact-page-container .contact-info .box .text {
+.contact-info .box .text {
+  margin: 0;
   display: flex;
-  margin-left: 0;
   flex-direction: column;
-  font-size: 14px;
+  font-size: var(--fs-300);
   font-weight: 300;
 }
 
-.contact-page-container .contact-info .box .text h3 {
+.contact-info .box .text h3 {
   color: var(--yellow);
-  font-size: 16px;
+  font-size: var(--fs-400);
   font-weight: 500;
 }
 
 .contact-form {
-  min-width: 350px;
-  height: 100%;
+  min-width: 25rem;
+  max-width: 35rem;
   padding: 40px;
-  background: #d9d9d9;
+  width: 60%;
+  background: var(--contact-fill);
 }
 
 .contact-form h2 {
-  font-size: 32px;
+  font-size: var(--fs-700);
   color: var(--dark);
-  padding-bottom: 10px;
-  margin-top: 36px;
 }
 
 .contact-form .name-phone {
@@ -439,13 +445,12 @@ nav li:first-child {
 .contact-form .name-phone .input-box {
   position: relative;
   width: 45%;
-  margin-top: 12px;
 }
 
 .contact-form .input-box {
   position: relative;
   width: 100%;
-  margin-top: 12px;
+  margin-top: 18px;
 }
 
 .contact-form .input-box input,
@@ -453,10 +458,10 @@ nav li:first-child {
 .contact-form .input-box select {
   width: 100%;
   padding: 12px 0;
-  font-size: 14px;
-  margin: 12px 0;
+  font-size: var(--fs-300);
+  margin-top: 12px;
   border: none;
-  border-bottom: 2px solid #333;
+  border-bottom: 1px solid var(--dark);
   outline: none;
   resize: none;
   background: none;
@@ -470,8 +475,8 @@ nav li:first-child {
   position: absolute;
   left: 5px;
   padding: 10px 0;
-  font-size: 16px;
-  margin: 12px 0;
+  font-size: var(--fs-400);
+  margin-top: var(--margin-form);
   pointer-events: none;
   transition: 0.5s;
   color: var(--grey);
@@ -479,8 +484,8 @@ nav li:first-child {
 }
 
 .contact-form .input-box select {
-  font-size: 16px;
-  margin: 12px 0;
+  font-size: var(--fs-400);
+  margin-top: var(--margin-form);
   color: var(--dark);
   z-index: 800;
 }
@@ -490,7 +495,7 @@ nav li:first-child {
 .contact-form .input-box textarea:focus ~ span,
 .contact-form .input-box textarea:valid ~ span {
   color: var(--yellow);
-  font-size: 14px;
+  font-size: var(--fs-300);
   transform: translateY(-25px);
 }
 
@@ -501,7 +506,7 @@ nav li:first-child {
   border: none;
   cursor: pointer;
   padding: 10px;
-  font-size: 18px;
+  font-size: var(--fs-500);
 }
 
 .contact-form .input-box input[type="submit"]:hover,
@@ -511,7 +516,7 @@ nav li:first-child {
 
 /* Views */
 
-@media (max-width: 1050px) {
+@media (max-width: 1065px) {
   .hideOnMobile {
     display: none;
   }
@@ -520,89 +525,107 @@ nav li:first-child {
   }
 
   .nav {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+  }
+
+  .contact-page-container {
+    margin-inline: auto;
+    flex-direction: column;
+    max-width: 30rem;
+    max-height: 72rem;
   }
 }
 
 @media (max-width: 880px) {
-  .homepage-container {
-    font-size: 32px;
-  }
-  .contact-page-container {
-    flex-direction: column;
+  :root {
+    --fs-xl: 2.5rem;
+    --fs-l: 2rem;
+    --fs-700: 1.75rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.2rem;
+    --fs-400: 1rem;
+    --fs-300: 0.85rem;
   }
 }
 
 @media (max-width: 660px) {
-  .homepage-container,
-  .container-heading {
-    font-size: 24px;
-  }
-
-  .contact-page-container {
-    flex-direction: column;
-  }
-
-  .contact-page-container .contact-info {
-    flex-direction: column;
-    height: 500px;
-  }
-
-  .contact-page-container .contact-info .message h2 {
-    font-size: 24px;
-    padding-top: 18px;
-  }
-
-  .contact-page-container .contact-info .message p {
-    font-size: 12px;
-    padding-top: 10px;
-    padding-bottom: 18px;
-  }
-
-  .contact-page-container .contact-info .message h3 {
-    font-size: 14px;
-    padding: 12px 0;
-  }
-
-  .contact-form h2 {
-    font-size: 24px;
-    margin-top: 18px;
-  }
-
-  .contact-form .input-box input,
-  .contact-form .input-box textarea,
-  .contact-form .input-box select {
-    font-size: 12px;
-  }
-
-  .contact-form .input-box textarea {
-    padding: 36px 0;
-  }
-
-  .contact-form .input-box span {
-    font-size: 14px;
-  }
-
-  .contact-form .input-box select {
-    font-size: 14px;
-  }
-
-  .contact-form .input-box input[type="submit"] {
-    font-size: 14px;
+  :root {
+    --fs-xl: 2rem;
+    --fs-l: 1.75rem;
   }
 }
 
-@media (max-width: 545px) {
-  .homepage-container,
-  .container-heading {
-    font-size: 18px;
+@media (max-width: 605px) {
+  :root {
+    --fs-xl: 1.85rem;
+    --fs-l: 1.8rem;
+    --fs-700: 1.6rem;
+    --fs-600: 1.3rem;
+    --fs-500: 1.15rem;
+    --fs-400: 0.8rem;
+    --fs-300: 0.75rem;
+  }
+  .contact-page-container {
+    border: none;
+  }
+
+  .contact-form {
+    min-width: 19rem;
+  }
+
+  .contact-form .name-phone {
+    flex-direction: column;
+  }
+
+  .contact-form .name-phone .input-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs-xl: 1.65rem;
+    --fs-l: 1.5rem;
+  }
+
+  .contact-form {
+    min-width: 14rem;
+    text-wrap: nowrap;
   }
 }
 
 @media (max-width: 400px) {
+  :root {
+    --fs-xl: 1.3rem;
+    --fs-l: 1rem;
+    --fs-700: 1.2rem;
+    --fs-600: 0.9rem;
+    --fs-500: 0.9rem;
+    --fs-400: 0.8rem;
+    --fs-300: 0.7rem;
+  }
+
   .sidebar {
     width: 100%;
     height: 30%;
+  }
+
+  .container-heading {
+    /* padding: 24px 0; */
+  }
+
+  .contact-info {
+    margin-left: 72px;
+    width: 100px;
+  }
+
+  .contact-info .message p {
+    max-width: 30px;
+  }
+
+  .contact-form {
+    text-align: center;
+    padding: 24px;
+    min-width: 14rem;
   }
 }
