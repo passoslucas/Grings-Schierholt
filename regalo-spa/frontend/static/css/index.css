@@ -22,17 +22,18 @@
   --fs-300: 0.85rem;
 }
 
-* {
+/* * {
   margin: 0;
   padding: 0;
-}
+} */
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: auto;
+  margin: 0;
+  padding: 0;
   font-family: var(--ff-body);
   color: var(--light);
   background: var(--dark);
@@ -54,6 +55,8 @@ body {
 
 /* navbar >> items */
 nav ul {
+  margin: 0;
+  padding: 0;
   width: 100%;
   list-style: none;
   display: flex;
@@ -204,7 +207,7 @@ nav li:first-child {
 
 /* Service Page >> Card >> Content */
 .card-content {
-  padding: 20px;
+  padding: 6px 20px;
   background: var(--light);
   transform: translateY(0%);
   transition: transform 500ms ease;
@@ -253,6 +256,7 @@ nav li:first-child {
   font-weight: 600;
   border-radius: 3px;
   padding: 0.5em 1.5em;
+  margin-bottom: 36px;
   text-decoration: none;
   border: 1.5px solid var(--dark);
 }
@@ -269,10 +273,11 @@ nav li:first-child {
 
 /* Service Page >> Modal */
 
+/* .modal-box {
+  display: flex;
+} */
+
 .modal {
-  position: sticky;
-  bottom: 20%;
-  left: 20%;
   padding: 2em;
   max-width: 50ch;
   max-height: 75ch;
@@ -307,7 +312,7 @@ nav li:first-child {
 .modal .modal-buttons {
   display: flex;
   justify-content: start;
-  margin-top: 20px;
+  margin: 20px;
 }
 
 .modal .modal-buttons #modal-contact-btn {
@@ -362,12 +367,9 @@ nav li:first-child {
 .contact-page-container {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
   text-transform: none;
   border: 2px solid var(--contact-fill);
   max-width: 72rem;
-  max-height: 34rem;
 }
 
 .contact-info {
@@ -378,7 +380,6 @@ nav li:first-child {
 }
 
 .contact-info .message h2 {
-  padding-bottom: 14px;
   font-size: var(--fs-700);
   color: var(--yellow);
 }
@@ -405,12 +406,12 @@ nav li:first-child {
   min-width: 48px;
   height: 48px;
   margin-left: -12px;
+  margin-top: 13px;
   display: flex;
   justify-content: center;
 }
 
 .contact-info .box .text {
-  margin: 0;
   display: flex;
   flex-direction: column;
   font-size: var(--fs-300);
@@ -421,6 +422,7 @@ nav li:first-child {
   color: var(--yellow);
   font-size: var(--fs-400);
   font-weight: 500;
+  margin-bottom: -12px;
 }
 
 .contact-form {
@@ -532,7 +534,6 @@ nav li:first-child {
     margin-inline: auto;
     flex-direction: column;
     max-width: 30rem;
-    max-height: 72rem;
   }
 }
 
@@ -565,6 +566,11 @@ nav li:first-child {
     --fs-400: 0.8rem;
     --fs-300: 0.75rem;
   }
+
+  .modal {
+    margin: 25% 0;
+  }
+
   .contact-page-container {
     border: none;
   }
@@ -608,7 +614,6 @@ nav li:first-child {
   .sidebar {
     width: 100%;
     height: 30%;
-    transition: 500ms;
   }
 
   .homepage-container {
@@ -621,6 +626,26 @@ nav li:first-child {
 
   .container-heading {
     padding-bottom: 36px;
+  }
+
+  .services-container .box-container {
+    row-gap: 36px;
+  }
+
+  .card {
+    height: 300px;
+    padding-bottom: 6px;
+    width: 80%;
+    /* overflow: visible; */
+  }
+
+  .card img {
+    margin: 0;
+    padding: 0;
+    width: 400px;
+    height: 235px;
+    object-fit: cover;
+    object-position: top 0 right 75px;
   }
 
   .contact-info {
